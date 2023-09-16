@@ -1,29 +1,266 @@
 /* The navigation bar */
-.navbar {
-    overflow: hidden;
-    background-color: #54cd13;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-  }
-  
-  /* Links inside the navbar */
-  .navbar a {
-    float: right;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change background on mouse-over */
-  .navbar a:hover {
-    background: #ddd;
-    color: black;
-  }
-  
-  /* Main content */
-  .main {
-    margin-top: 30px; /* Add a top margin to avoid content overlay */
-  }
+#navbar {
+  overflow: hidden;
+  background-color: #54cd13;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  left: 0;
+  width: 100%; /* Full width */
+  height: 60px;
+  z-index: 5;
+}
+
+/* Links inside the navbar */
+#language {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 23px 12px;
+  text-decoration: none;
+}
+
+#logo {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 23px 12px;
+  text-decoration: none;
+}
+
+#midmenu {
+  margin: auto;
+  width: 50%;
+  padding: 21px 12px;
+  display: block;
+  text-align: center;
+}
+
+#products{
+  vertical-align: middle;
+  color: #f2f2f2;
+
+  padding: 22px 12px;
+  text-decoration: none;
+}
+
+#downloads{
+  vertical-align: middle;
+  color: #f2f2f2;
+
+  padding: 22px 12px;
+  text-decoration: none;
+}
+
+#about{
+  vertical-align: middle;
+  color: #f2f2f2;
+
+  padding: 22px 12px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+#navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+#firstpage{
+  position: absolute;
+  background: none;
+  height: 625px;
+  width: 100%;
+  top: 60px;
+  display: block;
+  left: 0px;
+  text-align: center;
+}
+
+.img{
+  position: inherit;
+  background: #353535;
+  height: 600px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.motto{
+  position: inherit;
+  width: 50%;
+  top: 75%;
+  margin: 0 25%; 
+  font-size: xx-large; 
+  font-weight: 1000;
+}
+
+#firstpage a{
+  background: #606060;
+  display: block;
+  width: 100px;
+  position: inherit;
+  padding: 22px 23px;
+  bottom: 0;
+}
+
+#firstpage a:hover {
+  background: #ddd;
+  color: black;
+}
+
+#secondpage{
+  display: block;
+  position: absolute;
+  background: none;
+  height: 625px;
+  width: 100%;
+  top: 685px;
+  left: 0px;
+  text-align: left;
+}
+
+.textbox{
+  text-align: left;
+
+  padding: 2% 2%;
+  height: max-content;
+  background: #606060;
+  opacity: 30%;
+}
+
+#secondpage .textbox{
+  width: 25%;
+  margin: 10% 10%;
+  float: left;
+}
+
+.feature{
+  color: black;
+  font-weight: 1000;
+  font-size: xx-large;
+}
+
+.text{
+  font-size: x-large;
+}
+
+#thirdpage{
+  display: block;
+  position: absolute;
+  background: none;
+  height: 625px;
+  width: 100%;
+  top: 1320px;
+  left: 0px;
+}
+
+#thirdpage .textbox{
+  width: 25%;
+  margin: 10% 10%;
+  float: right;
+}
+
+#fourthpage{
+  display: block;
+  position: absolute;
+  background: none;
+  height: 625px;
+  width: 100%;
+  top: 1960px;
+  left: 0px;
+}
+
+#fourthpage .textbox{
+  width: 75%;
+  margin: auto;
+  margin-top: 32%;
+  padding: 0;
+  float: center;
+  text-align: center;
+}
+
+#fifthpage{
+  display: block;
+  position: absolute;
+  background: none;
+  height: 625px;
+  width: 100%;
+  top: 2580px;
+  left: 0px;
+}
+
+#fifthpage .textbox{
+  width: 25%;
+  margin: 10% 10%;
+  float: left;
+}
+
+#video{
+  display: block;
+  background: #606060;
+  height: 300px;
+  width: 500px;
+  right: 10%;
+  margin-top: 15%;
+  position: inherit;
+}
+
+#lastpage{
+  position: absolute;
+  background: none;
+  height: 625px;
+  width: 100%;
+  top: 3200px;
+  display: block;
+  left: 0px;
+  text-align: center;
+}
+
+.img{
+  position: inherit;
+  background: #353535;
+  height: 600px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+#lastpage a{
+  background: #606060;
+  display: block;
+  width: 100px;
+  position: inherit;
+  padding: 22px 23px;
+  bottom: 0;
+}
+
+#lastpage a:hover {
+  background: #ddd;
+  color: black;
+}
+
+#bottom{
+  display: block;
+  position: absolute;
+  background: none;
+  height: 225px;
+  width: 100%;
+  top: 3830px;
+  left: 0px;
+}
+
+.bg{
+  position: inherit;
+  background: #353535;
+  height: 225px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+/* Main content */
+.main {
+  margin-top: 8%; /* Add a top margin to avoid content overlay */
+}
