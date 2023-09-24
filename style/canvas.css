@@ -1,6 +1,5 @@
 /* The navigation bar */
 #navbar {
-  overflow: hidden;
   background-color: #54cd13;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
@@ -16,8 +15,46 @@
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 23px 12px;
   text-decoration: none;
+  top: 0;
+}
+
+ul {
+  list-style: none;
+  background-color: #54cd13;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+ul li {
+  display: inline-block;
+  position: relative;
+}
+
+ul li a {
+  display: block;
+  padding: 21px 12px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+ul li ul.dropdown li {
+  display: block;
+  background: #1ca127;
+}
+
+ul li ul.dropdown {
+  width: auto;
+  background: #54cd13;
+  position: inherit;
+  z-index: 999;
+  display: none;
+}
+
+ul li:hover ul.dropdown {
+  display: block;
 }
 
 #logo {
@@ -25,7 +62,7 @@
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 23px 12px;
+  padding: 21px 12px;
   text-decoration: none;
 }
 
@@ -37,7 +74,7 @@
   text-align: center;
 }
 
-#products{
+#products {
   vertical-align: middle;
   color: #f2f2f2;
 
@@ -45,7 +82,7 @@
   text-decoration: none;
 }
 
-#downloads{
+#downloads {
   vertical-align: middle;
   color: #f2f2f2;
 
@@ -53,7 +90,7 @@
   text-decoration: none;
 }
 
-#about{
+#about {
   vertical-align: middle;
   color: #f2f2f2;
 
@@ -67,7 +104,7 @@
   color: black;
 }
 
-#firstpage{
+#firstpage {
   position: relative;
   background: none;
   height: 100vh;
@@ -78,7 +115,7 @@
   text-align: center;
 }
 
-.img{
+.img {
   position: sticky;
   /*background: linear-gradient(blue, pink);*/
   height: 100vh;
@@ -87,19 +124,21 @@
   left: 0px;
 }
 
-.motto{
+.motto {
   position: inherit;
   color: white;
   width: 50%;
   top: -40%;
-  margin: 0 25%; 
-  font-size: xx-large; 
+  margin: 0 25%;
+  font-size: xx-large;
   font-weight: 1000;
 }
 
-#firstpage a{
+#firstpage a {
   position: inherit;
   background: rgba(60, 60, 60, 0.6);
+  color: white;
+  font-weight: bolder;
   width: 100px;
   margin: auto;
   padding: 22px 23px;
@@ -111,7 +150,7 @@
   color: black;
 }
 
-#secondpage{
+#secondpage {
   display: block;
   position: relative;
   background: none;
@@ -122,8 +161,8 @@
   text-align: left;
 }
 
-.textbox{
-  color:white;
+.textbox {
+  color: white;
   position: inherit;
   text-align: left;
   padding: 2% 2%;
@@ -131,23 +170,23 @@
   background: rgba(60, 60, 60, 0.3);
 }
 
-#secondpage .textbox{
+#secondpage .textbox {
   top: -85%;
   width: 25%;
   margin: 10% 10%;
   float: left;
 }
 
-.feature{
+.feature {
   font-weight: 1000;
   font-size: xx-large;
 }
 
-.text{
+.text {
   font-size: x-large;
 }
 
-#thirdpage{
+#thirdpage {
   display: block;
   position: relative;
   background: none;
@@ -157,20 +196,20 @@
   left: 0px;
 }
 
-#thirdpage .textbox{
+#thirdpage .textbox {
   top: -85%;
   width: 25%;
   margin: 10% 10%;
   float: right;
 }
 
-#thirdpage .img img{
+#thirdpage .img img {
   position: absolute;
   left: 0;
   right: 0;
 }
 
-#fourthpage{
+#fourthpage {
   display: block;
   position: relative;
   background: none;
@@ -180,13 +219,13 @@
   left: 0px;
 }
 
-#fourthpage .img img{
+#fourthpage .img img {
   position: absolute;
   left: 0;
   right: 0;
 }
 
-#fourthpage .textbox{
+#fourthpage .textbox {
   width: 75%;
   margin: auto;
   top: -30%;
@@ -195,7 +234,7 @@
   text-align: center;
 }
 
-#fifthpage{
+#fifthpage {
   display: block;
   position: relative;
   background: none;
@@ -205,14 +244,14 @@
   left: 0px;
 }
 
-#fifthpage .textbox{
+#fifthpage .textbox {
   top: -140%;
   width: 25%;
   margin: 10% 10%;
   float: left;
 }
 
-#video{
+#video {
   display: block;
   background: #606060;
   height: 300px;
@@ -223,40 +262,54 @@
   position: inherit;
 }
 
-#lastpage{
+#lastpage {
   position: relative;
   background: none;
   height: 100vh;
   width: 100%;
-  top: 0px;
   display: block;
-  left: 0px;
-  text-align: left;
 }
 
-#lastpage .motto{
-  color:black;
+#lastpage .motto {
+  color: black;
 }
 
-#lastpage a{
+#lastpage div {
+  position: absolute;
+  text-align: center;
+  padding-left: 0%;
+  top: 60%;
+  left: 0;
+}
+
+#lastpage #signup {
+  position: inherit;
+  width: 100px;
+  top: -20%;
+  margin: auto;
+}
+
+#lastpage #signup a {
   position: absolute;
   background: rgba(60, 60, 60, 0.6);
   width: 100px;
-  margin: auto;
+  color: white;
+  font-weight: bolder;
   padding: 22px 23px;
-  top: 85%;
+  left: -23px;
+  margin: auto;
   text-align: center;
 }
 
-#lastpage a:hover {
+#lastpage #signup a:hover {
   background: #ddd;
   color: black;
 }
-#lastpage .img img{
-  position:absolute;
+#lastpage .img img {
+  position: absolute;
 }
 
-#bottom{
+#bottom {
   display: block;
   position: relative;
   background: none;
@@ -266,7 +319,7 @@
   left: 0px;
 }
 
-.bg{
+.bg {
   position: inherit;
   background: #1ca127;
   height: 100px;
@@ -275,13 +328,13 @@
   left: 0px;
 }
 
-.bg .text{
+.bg .text {
   font-size: small;
 }
 
-#bottom .text{
+#bottom .text {
   position: absolute;
-  left:0;
+  left: 0;
   top: 0;
 }
 
@@ -291,4 +344,3 @@ html {
 body {
   min-height: 100%;
 }
-
