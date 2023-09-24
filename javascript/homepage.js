@@ -8,6 +8,8 @@ window.onload = function () {
     document.getElementById("topmotto").style.color="white"
     document.getElementById("firstpageimg").src = backgroundImg[0];
     var i = 0;
+
+    // Change image functions
     function changeImage() {
         i = (i+1)%3;
 
@@ -19,5 +21,7 @@ window.onload = function () {
             document.getElementById("topmotto").style.color="white"
         }
     }
+
+    // Timer
     setInterval(changeImage, 5000);
 }

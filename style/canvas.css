@@ -19,6 +19,7 @@
   top: 0;
 }
 
+/* dropdown menu */
 ul {
   list-style: none;
   background-color: #54cd13;
@@ -56,6 +57,7 @@ ul li ul.dropdown {
 ul li:hover ul.dropdown {
   display: block;
 }
+/* dropdown menu end */
 
 #logo {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -105,6 +107,7 @@ ul li:hover ul.dropdown {
   background: #ddd;
   color: black;
 }
+/* navigation bar over */
 
 #firstpage {
   position: relative;
@@ -119,7 +122,6 @@ ul li:hover ul.dropdown {
 
 .img {
   position: sticky;
-  /*background: linear-gradient(blue, pink);*/
   height: 100vh;
   width: 100%;
   top: 0px;
@@ -340,6 +342,7 @@ ul li:hover ul.dropdown {
   top: 0;
 }
 
+/* fill page */
 html {
   height: 100%;
 }
