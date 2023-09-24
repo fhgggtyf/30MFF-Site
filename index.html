@@ -1,7 +1,7 @@
 <html>
   <!-- root of DOM -->
   <head>
-    <title>Filtedit</title>
+    <title>The Islands</title>
     <link rel="stylesheet" type="text/css" href="style\canvas.css">
   </head>
 
@@ -10,30 +10,31 @@
     <div id="navbar">
       <div id="language"><ul>
           <li>
-            <a href="Languages">Language</a>
+            <a href="#">Language</a>
             <ul class="dropdown">
               <li>
-                <a href="English">English</a>
+                <a href="#">English</a>
               </li>
               <li>
-                <a href="English">English</a>
+                <a href="#">English</a>
               </li>
             </ul>
           </li>
         </ul></div>
 
-      <a href="#logo" id="logo"> NYI </a>
+      <a href="#" id="logo"> The Islands </a>
       <div id="midmenu">
-        <a href="products" id="products"> Products </a>
-        <a href="downloads" id="downloads"> Downloads </a>
-        <a href="about" id="about"> About </a>
+        <a href="#products" id="products"> Products </a>
+        <a href="#downloads" id="downloads"> Downloads </a>
+        <a href="#about" id="about"> About </a>
       </div>
     </div>
 
     <div id="firstpage">
-        <section class="img"><img src="img/FirstPage.jpg" width="100%" height="100%"></section>
-        <p class="motto">Explore the magnificence of nature.</p>
-        <a>SIGN UP</a>
+        <section class="img"><img id="firstpageimg" src="img/FirstPage.jpg" width="100%" height="100%"></section>
+        <script src="javascript/homepage.js"></script>
+        <p class="motto" id="topmotto">Explore the magnificence of nature.</p>
+        <a href="singuppage.html">SIGN UP</a>
       </div>
 
 
@@ -69,10 +70,10 @@
 
       <div id="fifthpage">
         <section class="img"><img src="img/FifthPage.jpg" width="100%" height="100%"></section>
-        <section id="video"></section>
+        <section id="video"><video src="img/Vid.mp4" width="500" height="300" controls></video></section>
         <div class="textbox">
-          <p class="feature">Lorem ipsum dolor sit amet.</p>
-          <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eleifend feugiat ex et pharetra. Fusce eu condimentum justo. Suspendisse ut neque erat. Quisque at nibh at risus feugiat hendrerit. Cras.</p>
+          <p class="feature">Travel Highlights.</p>
+          <p class="text">As watching this video, join us in our journey in The Islands, where there is beautiful scenery, rich cultural artefacts, and delicious local cuisines. Watch, as we gradually show the magnificence of The Islands frame by frame.</p>
         </div>
       </div>
 
@@ -80,7 +81,7 @@
       <div id="lastpage">
         <section class="img"><img src="img/LastPage.jpg" width="100%" height="100%"></section>
         <div class="motto"><p>Come, and enjoy a vacation you will never forget.</p></div>
-        <div id="signup"><a>SIGN UP</a></div>
+        <div id="signup"><a href="singuppage.html">SIGN UP</a></div>
       </div>
 
 

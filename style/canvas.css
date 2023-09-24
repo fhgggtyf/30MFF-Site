@@ -58,6 +58,8 @@ ul li:hover ul.dropdown {
 }
 
 #logo {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
   float: left;
   display: block;
   color: #f2f2f2;
@@ -245,7 +247,7 @@ ul li:hover ul.dropdown {
 }
 
 #fifthpage .textbox {
-  top: -140%;
+  top: -160%;
   width: 25%;
   margin: 10% 10%;
   float: left;
@@ -258,7 +260,7 @@ ul li:hover ul.dropdown {
   width: 500px;
   right: -50%;
   margin-top: 15%;
-  top: -85%;
+  top: -105%;
   position: inherit;
 }
 
