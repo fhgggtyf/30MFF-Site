@@ -5,7 +5,7 @@
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   left: 0;
-  width: 100%; /* Full width */
+  width: 100%;
   height: 60px;
   z-index: 5;
 }
@@ -61,27 +61,27 @@
   text-decoration: none;
 }
 
-/* Change background on mouse-over */
+/* Change background when mouse-over */
 #navbar a:hover {
   background: #ddd;
   color: black;
 }
 
 #firstpage{
-  position: absolute;
+  position: relative;
   background: none;
-  height: 625px;
+  height: 100vh;
   width: 100%;
-  top: 60px;
+  top: 0px;
   display: block;
   left: 0px;
   text-align: center;
 }
 
 .img{
-  position: inherit;
-  background: #353535;
-  height: 600px;
+  position: sticky;
+  /*background: linear-gradient(blue, pink);*/
+  height: 100vh;
   width: 100%;
   top: 0px;
   left: 0px;
@@ -89,20 +89,21 @@
 
 .motto{
   position: inherit;
+  color: white;
   width: 50%;
-  top: 75%;
+  top: -40%;
   margin: 0 25%; 
   font-size: xx-large; 
   font-weight: 1000;
 }
 
 #firstpage a{
-  background: #606060;
-  display: block;
-  width: 100px;
   position: inherit;
+  background: rgba(60, 60, 60, 0.6);
+  width: 100px;
+  margin: auto;
   padding: 22px 23px;
-  bottom: 0;
+  top: -30%;
 }
 
 #firstpage a:hover {
@@ -112,32 +113,32 @@
 
 #secondpage{
   display: block;
-  position: absolute;
+  position: relative;
   background: none;
-  height: 625px;
+  height: 100vh;
   width: 100%;
-  top: 685px;
+  top: 0;
   left: 0px;
   text-align: left;
 }
 
 .textbox{
+  color:white;
+  position: inherit;
   text-align: left;
-
   padding: 2% 2%;
   height: max-content;
-  background: #606060;
-  opacity: 30%;
+  background: rgba(60, 60, 60, 0.3);
 }
 
 #secondpage .textbox{
+  top: -85%;
   width: 25%;
   margin: 10% 10%;
   float: left;
 }
 
 .feature{
-  color: black;
   font-weight: 1000;
   font-size: xx-large;
 }
@@ -148,34 +149,47 @@
 
 #thirdpage{
   display: block;
-  position: absolute;
+  position: relative;
   background: none;
-  height: 625px;
+  height: 100vh;
   width: 100%;
-  top: 1320px;
+  top: 0px;
   left: 0px;
 }
 
 #thirdpage .textbox{
+  top: -85%;
   width: 25%;
   margin: 10% 10%;
   float: right;
 }
 
+#thirdpage .img img{
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
 #fourthpage{
   display: block;
-  position: absolute;
+  position: relative;
   background: none;
-  height: 625px;
+  height: 100vh;
   width: 100%;
-  top: 1960px;
+  top: 0px;
   left: 0px;
+}
+
+#fourthpage .img img{
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 #fourthpage .textbox{
   width: 75%;
   margin: auto;
-  margin-top: 32%;
+  top: -30%;
   padding: 0;
   float: center;
   text-align: center;
@@ -183,15 +197,16 @@
 
 #fifthpage{
   display: block;
-  position: absolute;
+  position: relative;
   background: none;
-  height: 625px;
+  height: 100vh;
   width: 100%;
-  top: 2580px;
+  top: 0;
   left: 0px;
 }
 
 #fifthpage .textbox{
+  top: -140%;
   width: 25%;
   margin: 10% 10%;
   float: left;
@@ -202,65 +217,78 @@
   background: #606060;
   height: 300px;
   width: 500px;
-  right: 10%;
+  right: -50%;
   margin-top: 15%;
+  top: -85%;
   position: inherit;
 }
 
 #lastpage{
-  position: absolute;
+  position: relative;
   background: none;
-  height: 625px;
-  width: 100%;
-  top: 3200px;
-  display: block;
-  left: 0px;
-  text-align: center;
-}
-
-.img{
-  position: inherit;
-  background: #353535;
-  height: 600px;
+  height: 100vh;
   width: 100%;
   top: 0px;
+  display: block;
   left: 0px;
+  text-align: left;
+}
+
+#lastpage .motto{
+  color:black;
 }
 
 #lastpage a{
-  background: #606060;
-  display: block;
+  position: absolute;
+  background: rgba(60, 60, 60, 0.6);
   width: 100px;
-  position: inherit;
+  margin: auto;
   padding: 22px 23px;
-  bottom: 0;
+  top: 85%;
+  text-align: center;
 }
 
 #lastpage a:hover {
   background: #ddd;
   color: black;
 }
+#lastpage .img img{
+  position:absolute;
+}
 
 #bottom{
   display: block;
-  position: absolute;
+  position: relative;
   background: none;
-  height: 225px;
+  height: 100px;
   width: 100%;
-  top: 3830px;
+  top: 0;
   left: 0px;
 }
 
 .bg{
   position: inherit;
-  background: #353535;
-  height: 225px;
+  background: #1ca127;
+  height: 100px;
   width: 100%;
   top: 0px;
   left: 0px;
 }
 
-/* Main content */
-.main {
-  margin-top: 8%; /* Add a top margin to avoid content overlay */
+.bg .text{
+  font-size: small;
 }
+
+#bottom .text{
+  position: absolute;
+  left:0;
+  top: 0;
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
