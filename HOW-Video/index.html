@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section Slider</title>
+    <style>
+      @font-face {
+        font-family: "customFont";
+        src: url("fonts/PTSerif-Regular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "titleFont";
+        src: url("fonts/Syncopate-Bold.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        overflow: hidden;
+        font-family: "titleFont", sans-serif; /* Use your custom font here */
+      }
+
+      h2 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .quiz-container {
+        width: 60%;
+        height: 80vh;
+        overflow-y: auto; /* Enable vertical scrolling */
+      }
+
+      .question {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 16px;
+      }
+
+      input[type="radio"] {
+        margin-right: 5px;
+      }
+
+      input[type="button"] {
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      input[type="button"]:hover {
+        background-color: #45a049;
+      }
+
+      #results {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      #restartBtn {
+        background-color: #008cba;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+
+      #restartBtn:hover {
+        background-color: #00688b;
+      }
+
+      #congratulations {
+        display: none;
+        font-size: 24px;
+        color: #4caf50;
+        margin-top: 20px;
+      }
+
+      .section {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        transition: transform 0.5s;
+      }
+
+      #section1 {
+        background-color: #f1f1f1;
+        padding-left: 10vw;
+        align-items: flex-start;
+      }
+
+      #section1 img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 150%;
+        max-height: 150%;
+      }
+
+      #title-text {
+        font-size: 3em;
+        margin-block-end: 0.2em;
+        margin-block-start: 0;
+        font-family: "titleFont", sans-serif; /* Use your custom font here */
+        text-shadow: 20px 10px 0px rgba(242, 201, 77, 1);
+      }
+
+      #title-intro {
+        font-size: 3em;
+        margin-block-end: 0.2em;
+        margin-block-start: 0;
+      }
+
+      #explain-text {
+        font-size: 1em;
+        margin-block-start: 0;
+        font-family: "customFont", sans-serif; /* Use your custom font here */
+      }
+
+      #section2 {
+        background-color: #f2c94d;
+        color: #fff;
+        position: relative;
+        /* transform: translateY(-100%); */
+      }
+
+      #section2 iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        margin: auto;
+        translate: -50% -50%;
+    }
+
+      #section3 {
+        background-color: #2ecc71;
+        color: #fff;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 1em;
+        background-color: #f2c94d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="section1" class="section">
+      <p id="title-intro">How To Be</p>
+      <br />
+      <p id="title-text">a HUMAN</p>
+      <p id="explain-text">
+        Join our intergalactic explorer on a comical journey to know <br />
+        what it means to be a human
+      </p>
+      <img src="img/WhatsApp Image 2023-12-04 at 01.09.46_fa08d946.jpg" />
+      <button onclick="slideToSection(2)">Next</button>
+    </div>
+
+    <div id="section2" class="section">
+      <div class="video-container">
+        <!-- Replace 'your-youtube-video-id' with the actual YouTube video ID -->
+        <iframe
+          id="youtubeVideo"
+          width="800px"
+          height="500px"
+          src="https://www.youtube.com/embed/Jzz4LefabEQ?si=qtI22GTa5hNDIqbm"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <button id="nextButton" style="display: block; margin-top: 80vh; background-color: #FFFFFF;" onclick="slideToSection(3)">
+        Next
+      </button>
+    </div>
+
+    <div id="section3" class="section" style="transform: translateY(200%)">
+      <div class="quiz-container">
+        <h2>Quiz</h2>
+
+        <form id="quizForm">
+          <div class="question">
+            <p>1. What is the focus of Lesson One in 'How to be a Human'?</p>
+            <label
+              ><input type="radio" name="q1" value="a" /> Expressions</label
+            >
+            <label><input type="radio" name="q1" value="b" /> Walking</label>
+            <label><input type="radio" name="q1" value="c" /> Breathing</label>
+            <label><input type="radio" name="q1" value="d" /> Laughing</label>
+            <label><input type="radio" name="q1" value="e" /> Eating</label>
+          </div>
+
+          <div class="question">
+            <p>
+              2. Which of the following is NOT a part of a step you should do
+              when you walk?
+            </p>
+            <label
+              ><input type="radio" name="q2" value="a" /> Take a step forward
+              with your left foot. Plant it down like you mean it!</label
+            >
+            <label
+              ><input type="radio" name="q2" value="b" /> As your legs do their
+              thing, let your arms swing in the opposite direction. It's all
+              about that balance.</label
+            >
+            <label
+              ><input type="radio" name="q2" value="c" /> Don't forget those
+              arms! Swing 'em naturally as you walk.</label
+            >
+            <label
+              ><input type="radio" name="q2" value="d" /> Bring your palms
+              together with enough force to produce a clear, audible sound upon
+              impact.</label
+            >
+            <label
+              ><input type="radio" name="q2" value="e" /> Now, bring your other
+              foot forward. Keep the rhythm going, nice and easy.</label
+            >
+          </div>
+
+          <div class="question">
+            <p>
+              3. What advice does the narrator give for walking like a human?
+            </p>
+            <label
+              ><input type="radio" name="q3" value="a" /> Take long
+              strides</label
+            >
+            <label
+              ><input type="radio" name="q3" value="b" /> Keep steps chill and
+              comfortable</label
+            >
+            <label
+              ><input type="radio" name="q3" value="c" /> Float in the
+              air</label
+            >
+            <label
+              ><input type="radio" name="q3" value="d" /> Swing your arms
+              randomly</label
+            >
+            <label
+              ><input type="radio" name="q3" value="e" /> Walk with your
+              hands</label
+            >
+          </div>
+
+          <div class="question">
+            <p>
+              4. What does the narrator emphasize as the most authentic
+              expression in Lesson Three?
+            </p>
+            <label
+              ><input type="radio" name="q4" value="a" /> A forced smile</label
+            >
+            <label
+              ><input type="radio" name="q4" value="b" /> A subtle and genuine
+              expression</label
+            >
+            <label
+              ><input type="radio" name="q4" value="c" /> A serious face</label
+            >
+            <label
+              ><input type="radio" name="q4" value="d" /> A surprised
+              look</label
+            >
+            <label
+              ><input type="radio" name="q4" value="e" /> An exaggerated
+              laugh</label
+            >
+          </div>
+
+          <div class="question">
+            <p>5. What does the alien attempt to mimic in Lesson Three?</p>
+            <label><input type="radio" name="q5" value="a" /> Birdsong</label>
+            <label
+              ><input type="radio" name="q5" value="b" /> Tree Swinging</label
+            >
+            <label
+              ><input type="radio" name="q5" value="c" /> Fish Swimming</label
+            >
+            <label
+              ><input type="radio" name="q5" value="d" /> Alien Dance
+              Moves</label
+            >
+            <label
+              ><input type="radio" name="q5" value="e" /> Human Laughter</label
+            >
+          </div>
+
+          <input type="button" value="Submit Quiz" onclick="calculateScore()" />
+          <div id="congratulations">Congratulations!</div>
+        </form>
+
+        <div id="results"></div>
+      </div>
+
+      <script>
+        function calculateScore() {
+          var score = 0;
+
+          // Array of correct answers
+          var correctAnswers = ["c", "d", "b", "b", "e"];
+
+          // Loop through each question and check the selected answer
+          for (var i = 1; i <= 5; i++) {
+            var selectedAnswer = document.querySelector(
+              'input[name="q' + i + '"]:checked'
+            );
+
+            // If an answer is selected, compare it with the correct answer
+            if (selectedAnswer) {
+              if (selectedAnswer.value === correctAnswers[i - 1]) {
+                score++;
+              }
+            }
+          }
+
+          // Display the results
+          var resultsDiv = document.getElementById("results");
+          resultsDiv.innerHTML =
+            "<h2>Quiz Results</h2><p>Your score is: " + score + " out of 5</p>";
+
+          // Display the correct answers
+          resultsDiv.innerHTML += "<h3>Correct Answers:</h3>";
+          for (var i = 0; i < correctAnswers.length; i++) {
+            resultsDiv.innerHTML +=
+              "<p>Question " +
+              (i + 1) +
+              ": " +
+              correctAnswers[i].toUpperCase() +
+              "</p>";
+          }
+
+          // Show the restart button
+          var restartBtn = document.getElementById("restartBtn");
+          restartBtn.style.display = "inline-block";
+
+          // Show congratulations message if the score is greater than or equal to 4
+          var congratulationsDiv = document.getElementById("congratulations");
+          congratulationsDiv.style.display = score > 3 ? "block" : "none";
+        }
+      </script>
+    </div>
+
+    <script>
+      function slideToSection(sectionNumber) {
+        const targetSection = document.getElementById(
+          `section${sectionNumber}`
+        );
+        const yOffset = targetSection.offsetTop;
+
+        document.querySelectorAll(".section").forEach((section) => {
+          section.style.transform = `translateY(-${yOffset}px)`;
+        });
+      }
+
+    </script>
+
+    </script>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </body>
+</html>
