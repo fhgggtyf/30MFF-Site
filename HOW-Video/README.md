@@ -16,9 +16,19 @@ The most time-consuming part of this project was the preparation before shooting
 
 QM took charge of the editing part of the project.
 
+Editing our short film was not just a task, but an exhilarating journey into the world of storytelling and visual artistry. Leveraging the robust capabilities of Da Vinci Resolve Studio 18.5, we transformed our raw footage into a cinematic experience that blends reality with a touch of fantasy. Our editing process was meticulously designed to elicit specific emotions, aiming to transport our audience into a dreamlike, almost surreal realm. The vivid color grading, characterized by high contrast and saturation, immediately draws viewers into this otherworldly ambiance, setting the tone for the entire film.
+
+Our narrative approach was multifaceted, combining the unique perspectives of a narrator and the actors. In keeping with the film's quirky essence, we made bold choices, such as deliberately including the camera and recording equipment within the frame, adding a meta-cinematic layer to the storytelling. Recognizing the power of sound in film, we paid particular attention to audio quality. Poor audio can detract from even the most visually stunning film, but we turned this challenge into an opportunity to enhance the film's quirky character. This included the creative use of graphic overlays, like animated lungs during breathing scenes, which added a whimsical yet poignant touch.
+
+Audio wasn't just a backdrop; it was a character in itself. We meticulously selected and layered sound effects, ranging from the subtle ambiance of birds chirping to a dynamic, quirky background score that mirrored the film's overall tone. This auditory landscape was not just heard but felt, enveloping the viewer in the film's unique universe.
+
+Our visual storytelling was punctuated with intentional, awkward zooms on characters' faces, creating a sense of intimacy while maintaining the film's whimsical tone. A standout moment was the scene where the alien encounters his reflection, with the narrator subtly present in the background. This scene, meticulously composed according to the rule of thirds, symbolizes the film's careful balance of whimsy and thoughtful composition.
+
+One of our greatest technical challenges was ensuring seamless audio-video synchronization and crafting transitions that felt natural and unobtrusive. The goal was to create a smooth, cohesive narrative flow that felt effortlessly guided by an unseen hand, maintaining the illusion of a world that was both bizarre and utterly believable. In achieving this, we not only showcased our technical skills but also our commitment to storytelling that engages, surprises, and delights.
+
 **Website Implementation:**
 
-Buka developed the basic wireframe for the website, and Jason handled its implementation. We chose yellow, white, and black colors to match the whimsical and fun vibe of the video. Additionally, we included a test section to enhance user engagement.
+Buka developed the basic wireframe for the website, and Jason handled its implementation. Transparent backgrounds and text shadows are employed to enhance the visual appeal of the website. Shadows, such as the text shadow in the first section, add depth to the design. We included a test section to enhance user engagement. The website follows a single-page application approach, where content is dynamically loaded on a single HTML page rather than navigating between multiple pages. This is achieved through JavaScript and CSS transitions and it makes the alien student unable to cheat and review the video after entering the test area! another thing is the use of CSS transitions enhances the user experience by providing smooth animations when transitioning between sections. The transform property is transitioned to create a sliding effect. The website embeds a YouTube video using an <iframe>. The video is placed within a container to maintain its aspect ratio. We chose yellow, white, and black colors to match the whimsical and fun vibe of the video. It also fits in with the yellowish hue of the video.
 
 **Quiz:**
 

@@ -58,8 +58,8 @@
 
       input[type="button"] {
         padding: 10px;
-        background-color: #4caf50;
-        color: white;
+        background-color: white;
+        color: black;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -68,7 +68,7 @@
       }
 
       input[type="button"]:hover {
-        background-color: #45a049;
+        background-color: grey;
       }
 
       #results {
@@ -98,7 +98,7 @@
       #congratulations {
         display: none;
         font-size: 24px;
-        color: #4caf50;
+        color: black;
         margin-top: 20px;
       }
 
@@ -164,7 +164,7 @@
     }
 
       #section3 {
-        background-color: #2ecc71;
+        background-color: #f2c94d;
         color: #fff;
       }
 
@@ -332,48 +332,36 @@
 
       <script>
         function calculateScore() {
-          var score = 0;
+                var score = 0;
 
-          // Array of correct answers
-          var correctAnswers = ["c", "d", "b", "b", "e"];
+                // Array of correct answers
+                var correctAnswers = ['c', 'd', 'b', 'b', 'e'];
 
-          // Loop through each question and check the selected answer
-          for (var i = 1; i <= 5; i++) {
-            var selectedAnswer = document.querySelector(
-              'input[name="q' + i + '"]:checked'
-            );
+                // Loop through each question and check the selected answer
+                for (var i = 1; i <= 5; i++) {
+                    var selectedAnswer = document.querySelector('input[name="q' + i + '"]:checked');
 
-            // If an answer is selected, compare it with the correct answer
-            if (selectedAnswer) {
-              if (selectedAnswer.value === correctAnswers[i - 1]) {
-                score++;
-              }
-            }
-          }
+                    // If an answer is selected, compare it with the correct answer
+                    if (selectedAnswer) {
+                        if (selectedAnswer.value === correctAnswers[i - 1]) {
+                            score++;
+                        }
+                    }
+                }
 
-          // Display the results
-          var resultsDiv = document.getElementById("results");
-          resultsDiv.innerHTML =
-            "<h2>Quiz Results</h2><p>Your score is: " + score + " out of 5</p>";
+                // Display the results
+                var resultsDiv = document.getElementById('results');
+                resultsDiv.innerHTML = "<h2>Quiz Results</h2><p>Your score is: " + score + " out of 5</p>";
 
-          // Display the correct answers
-          resultsDiv.innerHTML += "<h3>Correct Answers:</h3>";
-          for (var i = 0; i < correctAnswers.length; i++) {
-            resultsDiv.innerHTML +=
-              "<p>Question " +
-              (i + 1) +
-              ": " +
-              correctAnswers[i].toUpperCase() +
-              "</p>";
-          }
+                // Display the correct answers
+                resultsDiv.innerHTML += "<h3>Correct Answers:</h3>";
+                for (var i = 0; i < correctAnswers.length; i++) {
+                    resultsDiv.innerHTML += "<p>Question " + (i + 1) + ": " + correctAnswers[i].toUpperCase() + "</p>";
+                }
 
-          // Show the restart button
-          var restartBtn = document.getElementById("restartBtn");
-          restartBtn.style.display = "inline-block";
-
-          // Show congratulations message if the score is greater than or equal to 4
-          var congratulationsDiv = document.getElementById("congratulations");
-          congratulationsDiv.style.display = score > 3 ? "block" : "none";
+                // Show congratulations message if the score is greater than or equal to 4
+                var congratulationsDiv = document.getElementById('congratulations');
+                congratulationsDiv.style.display = score > 3 ? 'block' : 'none';
         }
       </script>
     </div>
