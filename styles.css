@@ -64,28 +64,6 @@
   transform: scaleY(1);
 }
 
-/* Add some space below the navigation bar to avoid content overlap */
-.content {
-  margin-top: 60px; /* Adjust as needed based on your navigation bar height */
-  padding: 20px;
-}
-
-/* Example Sections */
-/* section {
-  height: 100vh;
-  text-align: center;
-}
-
-section:nth-child(odd) {
-  background-color: #333;
-  color: #fff;
-}
-
-section:nth-child(even) {
-  background-color: #eee;
-  color: #333;
-} */
-
 body {
   margin: 0;
   padding: 0;
@@ -94,44 +72,7 @@ body {
   color: #fff;
 }
 
-/* Header Section Styles */
-.header-section {
-  height: 100vh;
-  background-image: url("sunsetbackground.jpg");
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header-container {
-  text-align: center;
-}
-
-.header-container h1 {
-  font-size: 5.5em;
-  font-family: "Proxima Nova Bold", sans-serif;
-  margin-block-end: 0;
-  margin-top: 0;
-}
-
-.header-container p {
-  font-size: 2.5em;
-  font-family: "Proxima Nova", sans-serif;
-  margin-block-end: 0;
-  margin-block-start: 0.2em;
-}
-
-/* New Section Styles */
-.new-section {
-  height: 30vh;
-  background-color: #000; /* Adjust background color as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.new-container {
+.title-container {
   text-align: center;
   display: flex;
   height: 20vh;
@@ -140,7 +81,7 @@ body {
   flex-direction: column;
 }
 
-.new-container h2 {
+.title-container h2 {
   font-size: 2.3em;
   z-index: 2;
   color: #ffa500; /* Text color */
@@ -149,7 +90,6 @@ body {
 }
 
 #about-text {
-  /* top: 110vh; */
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 6em;
@@ -195,18 +135,8 @@ body {
   z-index: 1;
   pointer-events: none;
 }
-.intro-container {
-  height: 100%;
-  left: 20%;
-  position: absolute;
-  display: flex;
-  align-items: stretch;
-  text-align: left;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 2;
-}
 
+/* different sizes of text */
 .intro-container .superhighlight {
   font-size: 3.5em;
   margin-top: 0px;
@@ -220,6 +150,18 @@ body {
   font-family: "Proxima Nova", sans-serif;
   margin-bottom: 0px;
   margin-top: 0px;
+}
+
+.intro-container {
+  height: 100%;
+  left: 20%;
+  position: absolute;
+  display: flex;
+  align-items: stretch;
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
 }
 
 .intro-container p {
@@ -349,8 +291,6 @@ img {
 }
 
 #my-project-text {
-  /* top: 210vh; */
-  /* transform: translate(0%, -35%); */
   text-align: left;
   width: 80%;
   font-size: 6em;
@@ -369,8 +309,6 @@ img {
 }
 
 #random-project-text {
-  /* top: 210vh; */
-  /* transform: translate(0%, -35%); */
   text-align: right;
   width: 80%;
   font-size: 6em;
@@ -400,7 +338,6 @@ img {
   background-color: #ffa500;
   padding: 20px;
   border-radius: 12px;
-  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); Updated box shadow for depth */
   margin: 10px;
   width: calc(25% - 20px); /* Calculate 25% width minus margin */
   box-sizing: border-box;
@@ -421,39 +358,39 @@ img {
   transform: scale(1.05);
 }
 
-#contact{
-    background: linear-gradient(to bottom, #000, #FFA500 50px, #FFA500);
-    padding: 50px; /* Adjust padding as needed */
-    text-align: center;
-    color: #fff; /* Set text color as needed */
+#contact {
+  background: linear-gradient(to bottom, #000, #ffa500 50px, #ffa500);
+  padding: 50px; /* Adjust padding as needed */
+  text-align: center;
+  color: #fff; /* Set text color as needed */
 }
 
 #contact h2 {
-    font-size: 2.5em;
-    color: #000;
-    margin-bottom: 20px; /* Adjust margin as needed */
+  font-size: 2.5em;
+  color: #000;
+  margin-bottom: 20px; /* Adjust margin as needed */
 }
 
 .contact-info {
-    margin-top: 20px; /* Adjust margin as needed */
+  margin-top: 20px; /* Adjust margin as needed */
 }
 
 .contact-info p {
-    font-size: 1.5em;
-    margin: 10px 0;
-    color: #555; /* Set text color as needed */
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #555; /* Set text color as needed */
 }
 
 .social-media {
-    margin-top: 20px; /* Adjust margin as needed */
+  margin-top: 20px; /* Adjust margin as needed */
 }
 
 .social-media a {
-    display: inline-block;
-    margin: 0 10px;
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .social-media img {
-    width: 40px; /* Set the width of the logos as needed */
-    height: 40px; /* Set the height of the logos as needed */
+  width: 40px; /* Set the width of the logos as needed */
+  height: 40px; /* Set the height of the logos as needed */
 }
