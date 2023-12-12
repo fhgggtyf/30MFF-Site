@@ -1,0 +1,351 @@
+/* The navigation bar */
+#navbar {
+  background-color: #54cd13;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 5;
+}
+
+/* Links inside the navbar */
+#language {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+}
+
+/* dropdown menu */
+ul {
+  list-style: none;
+  background-color: #54cd13;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+ul li {
+  display: inline-block;
+  position: relative;
+}
+
+ul li a {
+  display: block;
+  padding: 21px 12px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+ul li ul.dropdown li {
+  display: block;
+  background: #1ca127;
+}
+
+ul li ul.dropdown {
+  width: auto;
+  background: #54cd13;
+  position: inherit;
+  z-index: 999;
+  display: none;
+}
+
+ul li:hover ul.dropdown {
+  display: block;
+}
+/* dropdown menu end */
+
+#logo {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 21px 12px;
+  text-decoration: none;
+}
+
+#midmenu {
+  margin: auto;
+  width: 50%;
+  padding: 21px 12px;
+  display: block;
+  text-align: center;
+}
+
+#products {
+  vertical-align: middle;
+  color: #f2f2f2;
+
+  padding: 22px 12px;
+  text-decoration: none;
+}
+
+#downloads {
+  vertical-align: middle;
+  color: #f2f2f2;
+
+  padding: 22px 12px;
+  text-decoration: none;
+}
+
+#about {
+  vertical-align: middle;
+  color: #f2f2f2;
+
+  padding: 22px 12px;
+  text-decoration: none;
+}
+
+/* Change background when mouse-over */
+#navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+/* navigation bar over */
+
+#firstpage {
+  position: relative;
+  background: none;
+  height: 100vh;
+  width: 100%;
+  top: 0px;
+  display: block;
+  left: 0px;
+  text-align: center;
+}
+
+.img {
+  position: sticky;
+  height: 100vh;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.motto {
+  position: inherit;
+  color: white;
+  width: 50%;
+  top: -40%;
+  margin: 0 25%;
+  font-size: xx-large;
+  font-weight: 1000;
+}
+
+#firstpage a {
+  position: inherit;
+  background: rgba(60, 60, 60, 0.6);
+  color: white;
+  font-weight: bolder;
+  width: 100px;
+  margin: auto;
+  padding: 22px 23px;
+  top: -30%;
+}
+
+#firstpage a:hover {
+  background: #ddd;
+  color: black;
+}
+
+#secondpage {
+  display: block;
+  position: relative;
+  background: none;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0px;
+  text-align: left;
+}
+
+.textbox {
+  color: white;
+  position: inherit;
+  text-align: left;
+  padding: 2% 2%;
+  height: max-content;
+  background: rgba(60, 60, 60, 0.3);
+}
+
+#secondpage .textbox {
+  top: -85%;
+  width: 25%;
+  margin: 10% 10%;
+  float: left;
+}
+
+.feature {
+  font-weight: 1000;
+  font-size: xx-large;
+}
+
+.text {
+  font-size: x-large;
+}
+
+#thirdpage {
+  display: block;
+  position: relative;
+  background: none;
+  height: 100vh;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+#thirdpage .textbox {
+  top: -85%;
+  width: 25%;
+  margin: 10% 10%;
+  float: right;
+}
+
+#thirdpage .img img {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+#fourthpage {
+  display: block;
+  position: relative;
+  background: none;
+  height: 100vh;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+#fourthpage .img img {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+#fourthpage .textbox {
+  width: 75%;
+  margin: auto;
+  top: -30%;
+  padding: 0;
+  float: center;
+  text-align: center;
+}
+
+#fifthpage {
+  display: block;
+  position: relative;
+  background: none;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0px;
+}
+
+#fifthpage .textbox {
+  top: -160%;
+  width: 25%;
+  margin: 10% 10%;
+  float: left;
+}
+
+#video {
+  display: block;
+  background: #606060;
+  height: 300px;
+  width: 500px;
+  right: -50%;
+  margin-top: 15%;
+  top: -105%;
+  position: inherit;
+}
+
+#lastpage {
+  position: relative;
+  background: none;
+  height: 100vh;
+  width: 100%;
+  display: block;
+}
+
+#lastpage .motto {
+  color: black;
+}
+
+#lastpage div {
+  position: absolute;
+  text-align: center;
+  padding-left: 0%;
+  top: 60%;
+  left: 0;
+}
+
+#lastpage #signup {
+  position: inherit;
+  width: 100px;
+  top: -20%;
+  margin: auto;
+}
+
+#lastpage #signup a {
+  position: absolute;
+  background: rgba(60, 60, 60, 0.6);
+  width: 100px;
+  color: white;
+  font-weight: bolder;
+  padding: 22px 23px;
+  left: -23px;
+  margin: auto;
+  text-align: center;
+}
+
+#lastpage #signup a:hover {
+  background: #ddd;
+  color: black;
+}
+#lastpage .img img {
+  position: absolute;
+}
+
+#bottom {
+  display: block;
+  position: relative;
+  background: none;
+  height: 100px;
+  width: 100%;
+  top: 0;
+  left: 0px;
+}
+
+.bg {
+  position: inherit;
+  background: #1ca127;
+  height: 100px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.bg .text {
+  font-size: small;
+}
+
+#bottom .text {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* fill page */
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
