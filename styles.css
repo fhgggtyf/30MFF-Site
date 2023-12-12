@@ -102,7 +102,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-attachment: fixed; /* Add this line for the parallax effect */
 }
 
 .header-container {
@@ -130,7 +129,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-attachment: fixed; /* Add this line for the parallax effect */
 }
 
 .new-container {
