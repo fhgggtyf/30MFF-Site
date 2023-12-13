@@ -51,7 +51,7 @@
   bottom: 0;
   background: linear-gradient(
     to top,
-    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.05),
     rgba(255, 255, 255, 0.5)
   );
   transform: scaleY(0);
@@ -67,7 +67,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   background-color: #000;
   color: #fff;
 }
@@ -87,6 +87,7 @@ body {
   color: #ffa500; /* Text color */
   margin-block-end: 0;
   margin-block-start: 0.2em;
+  font-family: "Proxima Nova Bold", sans-serif;
 }
 
 #about-text {
@@ -106,6 +107,7 @@ body {
   );
   -webkit-background-clip: text; /* Clip the background to the text */
   background-clip: text;
+  font-family: "Proxima Nova Bold", sans-serif;
 }
 
 /* Introduction Section Styles */
@@ -166,7 +168,7 @@ body {
 
 .intro-container p {
   font-size: 1.5em;
-  font-family: "Proxima Nova", sans-serif;
+  font-family: "Proxima Nova Bold", sans-serif;
   margin-bottom: 0px;
   margin-top: 0px;
 }
@@ -204,6 +206,34 @@ img {
   width: 100%;
 }
 
+#speechbubble{
+  position: absolute;
+  left: 6vw;
+  top: 122vh;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#speechbubble p{
+  color: #000;
+  transform: translate(-50%, 0);
+  top: 17%;
+  width: 250px;
+  left: 50%;
+  position: absolute;
+  z-index: 3;
+  font-family: "Proxima Nova Bold", sans-serif;
+  font-weight: bold;
+  font-size: large;
+}
+
+
+#speechbubble img{
+  width: 250px;
+}
+
 .text-container {
   display: flex;
   margin-top: 20px;
@@ -232,6 +262,7 @@ img {
 
 .info-table-row p {
   width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .rectangle-button {
@@ -266,6 +297,7 @@ img {
   color: #ffa500; /* Text color */
   margin-block-end: 0;
   margin-block-start: 0.2em;
+  font-family: "Proxima Nova Bold", sans-serif;
 }
 
 .projects-title-container {
@@ -306,6 +338,7 @@ img {
   );
   -webkit-background-clip: text; /* Clip the background to the text */
   background-clip: text;
+  font-family: "Proxima Nova Bold", sans-serif;
 }
 
 #random-project-text {
@@ -324,6 +357,7 @@ img {
   );
   -webkit-background-clip: text; /* Clip the background to the text */
   background-clip: text;
+  font-family: "Proxima Nova Bold", sans-serif;
 }
 
 .projects-container {
@@ -345,6 +379,10 @@ img {
   text-decoration: none;
 }
 
+.project-card a h3{
+  font-family: "Proxima Nova Bold", sans-serif;
+}
+
 .collab {
   display: flex;
   flex-direction: column;
@@ -359,6 +397,7 @@ img {
 }
 
 #contact {
+  font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(to bottom, #000, #ffa500 50px, #ffa500);
   padding: 50px; /* Adjust padding as needed */
   text-align: center;
