@@ -14,6 +14,7 @@
   font-style: normal;
 }
 
+
 /* Top Navigation Bar Styles */
 #navbar {
   overflow: hidden;
@@ -40,6 +41,14 @@
   padding: 14px 30px;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s; /* Add transition for a smooth color change */
+}
+
+.menu-toggle {
+  display: none; /* Initially hide the menu toggle for larger screens */
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  padding: 14px 20px;
 }
 
 #navbar a::before {
@@ -114,6 +123,7 @@ body {
 .intro-section {
   height: 100vh;
   background-size: cover;
+background-image: url('background.jpg');
   color: #fff;
   display: flex;
   align-items: left;
@@ -300,7 +310,7 @@ img {
 }
 
 .projects-title-container {
-  text-align: center;
+  text-align: left;
   display: flex;
   height: 20vh;
   flex-direction: row;
@@ -311,7 +321,7 @@ img {
 }
 
 .random-projects-title-container {
-  text-align: center;
+  text-align: right;
   display: flex;
   height: 20vh;
   flex-direction: row-reverse;
@@ -435,4 +445,96 @@ img {
 .social-media img {
   width: 40px; /* Set the width of the logos as needed */
   height: 40px; /* Set the height of the logos as needed */
+}
+
+@media only screen and (max-width: 599px) {
+  /* Styles for screens up to 599px (phones) */
+
+  body {
+    font-size: 12px;
+  }
+
+  #navbar {
+    flex-direction: column; /* Stack items vertically for smaller screens */
+    align-items: flex-end; /* Adjust alignment for better positioning */
+    background-color: #000;
+}
+
+#navbar a {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 20px;
+    display: none; 
+}
+
+#navbar.show a {
+  display: block;
+}
+
+.menu-toggle {
+    display: block; /* Show the menu toggle for smaller screens */
+}
+
+  .image-container{
+    display: none;
+  }
+
+  .text-container{
+    padding-left: 0;
+    width: 100%;
+    height: fit-content;
+  }
+  .intro-section{
+    background-image: none;
+  }
+  .intro-container{
+    left: 0;
+    margin: auto;
+    position: relative;
+  }
+  .intro-container p{
+    text-align: center;
+  }
+
+  #im-text::before{
+    content: "IM";
+  }
+
+  #my-project-text::before{
+    content: "Websites";
+  }
+
+  #random-project-text::before{
+    content: "Projects";
+  }
+
+  .projects-container{
+    flex-direction: column;
+  }
+  .project-card{
+    width: calc(100% - 20px);
+  }
+  /* Add other tablet styles as needed */
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  /* Adjust styles for desktops */
+
+  .image-container{
+    display: flex;
+  }
+
+  #im-text::before{
+    content: "Interactive Media";
+  }
+
+  #my-project-text::before{
+    content: "Interactive Websites";
+  }
+
+  #random-project-text::before{
+    content: "Other Projects";
+  }
+  /* Add other desktop styles as needed */
 }

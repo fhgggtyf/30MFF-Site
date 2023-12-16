@@ -11,13 +11,15 @@
     <body>
 
         <!-- Introduction Section -->
-        <section class="intro-section" id="home"
-            style="background-image: url('background.jpg');">
+        <section class="intro-section" id="home">
+            
             <div id="navbar">
+                <div class="menu-toggle">&#9776;</div>
                 <a href="#contact">Contact</a>
                 <a href="#portfolio">Projects</a>
                 <a href="#about">About</a>
                 <a href="#home">Home</a>
+
             </div>
             <div class="intro-container">
                 <p><span>Hi there<span
@@ -26,7 +28,7 @@
                     <span class="highlight" style="font-weight: bold;"><span
                             class="superhighlight">J</span>ason <span
                             class="superhighlight">X</span>ia,</span></p>
-                <p>An <span class="highlight">Interactive Media</span> student.</p>
+                <p>An <span class="highlight" id="im-text"></span> student.</p>
             </div>
         </section>
 
@@ -64,9 +66,10 @@
                     <div id="info-table">
                         <div class="info-table-row">
                             <p>Name: Jason Xia</p>
-                            <p>Age: 20</p></div>
+                            <p>Email: jx2467@nuy.edu</p>
+                            </div>
                         <div class="info-table-row">
-                            <p>Email: xjc18502795710@outlook.com</p>
+                            <p>Age: 20</p>
                             <p>Phone: +86 185 0278 7317</p></div>
                     </div>
                     <!-- <a href class="rectangle-button">Download CV</a> -->
@@ -78,7 +81,7 @@
         <section class="projects-section" id="portfolio">
             <div class="projects-title-container">
                 <h2>My Interactive Website Projects</h2>
-                <h1 id="my-project-text">Interactive Websites</h1>
+                <h1 id="my-project-text"></h1>
             </div>
 
             <div class="projects-container">
@@ -165,7 +168,7 @@
         <section class="projects-section">
             <div class="random-projects-title-container">
                 <h2>Some Random Projects</h2>
-                <h1 id="random-project-text">Other Projects</h1>
+                <h1 id="random-project-text"></h1>
             </div>
 
             <div class="projects-container">
@@ -315,6 +318,21 @@
         </section>
 
         <script>
+document.addEventListener('DOMContentLoaded', function () {
+    var navbar = document.getElementById('navbar');
+    var menuToggle = document.querySelector('.menu-toggle');
+
+    menuToggle.addEventListener('click', function () {
+        navbar.classList.toggle('show');
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!navbar.contains(event.target) && event.target !== menuToggle) {
+            navbar.classList.remove('show');
+        }
+    });
+});
+
             document.addEventListener('scroll', function () {
                 var navbar = document.getElementById('navbar');
     
