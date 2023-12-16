@@ -14,12 +14,12 @@
         <section class="intro-section" id="home">
             
             <div id="navbar">
-                <div class="menu-toggle">&#9776;</div>
+
                 <a href="#contact">Contact</a>
                 <a href="#portfolio">Projects</a>
                 <a href="#about">About</a>
                 <a href="#home">Home</a>
-
+                <div class="menu-toggle">&#9776;</div>
             </div>
             <div class="intro-container">
                 <p><span>Hi there<span
@@ -337,11 +337,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 var navbar = document.getElementById('navbar');
     
                 // Check if the scroll position is below 100vh
-                if (window.scrollY > 100) {
-                    navbar.style.backgroundColor = '#000'; // Change the background color to black
-                } else {
-                    navbar.style.backgroundColor = 'transparent'; // Set it back to transparent
+                if(window.innerWidth > 1024){
+                    if (window.scrollY > 100) {
+                        navbar.style.backgroundColor = '#000'; // Change the background color to black
+                    } else {
+                        navbar.style.backgroundColor = 'transparent'; // Set it back to transparent
+                    }
                 }
+
             });
 
             function openPopup() {

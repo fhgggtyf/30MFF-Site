@@ -455,7 +455,7 @@ img {
   }
 
   #navbar {
-    flex-direction: column; /* Stack items vertically for smaller screens */
+    flex-direction: column-reverse; /* Stack items vertically for smaller screens */
     align-items: flex-end; /* Adjust alignment for better positioning */
     background-color: #000;
 }
