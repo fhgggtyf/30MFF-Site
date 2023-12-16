@@ -14,7 +14,6 @@
   font-style: normal;
 }
 
-
 /* Top Navigation Bar Styles */
 #navbar {
   overflow: hidden;
@@ -123,7 +122,7 @@ body {
 .intro-section {
   height: 100vh;
   background-size: cover;
-background-image: url('background.jpg');
+  background-image: url("background.jpg");
   color: #fff;
   display: flex;
   align-items: left;
@@ -458,60 +457,60 @@ img {
     flex-direction: column-reverse; /* Stack items vertically for smaller screens */
     align-items: flex-end; /* Adjust alignment for better positioning */
     background-color: #000;
-}
+  }
 
-#navbar a {
+  #navbar a {
     width: 100%;
     box-sizing: border-box;
     padding: 14px 20px;
-    display: none; 
-}
-
-#navbar.show a {
-  display: block;
-}
-
-.menu-toggle {
-    display: block; /* Show the menu toggle for smaller screens */
-}
-
-  .image-container{
     display: none;
   }
 
-  .text-container{
+  #navbar.show a {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block; /* Show the menu toggle for smaller screens */
+  }
+
+  .image-container {
+    display: none;
+  }
+
+  .text-container {
     padding-left: 0;
     width: 100%;
     height: fit-content;
   }
-  .intro-section{
+  .intro-section {
     background-image: none;
   }
-  .intro-container{
+  .intro-container {
     left: 0;
     margin: auto;
     position: relative;
   }
-  .intro-container p{
+  .intro-container p {
     text-align: center;
   }
 
-  #im-text::before{
+  #im-text::before {
     content: "IM";
   }
 
-  #my-project-text::before{
+  #my-project-text::before {
     content: "Websites";
   }
 
-  #random-project-text::before{
+  #random-project-text::before {
     content: "Projects";
   }
 
-  .projects-container{
+  .projects-container {
     flex-direction: column;
   }
-  .project-card{
+  .project-card {
     width: calc(100% - 20px);
   }
   /* Add other tablet styles as needed */
@@ -521,19 +520,19 @@ img {
 @media only screen and (min-width: 1024px) {
   /* Adjust styles for desktops */
 
-  .image-container{
+  .image-container {
     display: flex;
   }
 
-  #im-text::before{
+  #im-text::before {
     content: "Interactive Media";
   }
 
-  #my-project-text::before{
+  #my-project-text::before {
     content: "Interactive Websites";
   }
 
-  #random-project-text::before{
+  #random-project-text::before {
     content: "Other Projects";
   }
   /* Add other desktop styles as needed */

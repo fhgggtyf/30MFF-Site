@@ -12,7 +12,7 @@
 
         <!-- Introduction Section -->
         <section class="intro-section" id="home">
-            
+
             <div id="navbar">
 
                 <a href="#contact">Contact</a>
@@ -67,7 +67,7 @@
                         <div class="info-table-row">
                             <p>Name: Jason Xia</p>
                             <p>Email: jx2467@nuy.edu</p>
-                            </div>
+                        </div>
                         <div class="info-table-row">
                             <p>Age: 20</p>
                             <p>Phone: +86 185 0278 7317</p></div>
@@ -318,20 +318,20 @@
         </section>
 
         <script>
-document.addEventListener('DOMContentLoaded', function () {
-    var navbar = document.getElementById('navbar');
-    var menuToggle = document.querySelector('.menu-toggle');
+            document.addEventListener('DOMContentLoaded', function () {
+                var navbar = document.getElementById('navbar');
+                var menuToggle = document.querySelector('.menu-toggle');
 
-    menuToggle.addEventListener('click', function () {
-        navbar.classList.toggle('show');
-    });
+                menuToggle.addEventListener('click', function () {
+                    navbar.classList.toggle('show');
+                });
 
-    document.addEventListener('click', function (event) {
-        if (!navbar.contains(event.target) && event.target !== menuToggle) {
-            navbar.classList.remove('show');
-        }
-    });
-});
+                document.addEventListener('click', function (event) {
+                    if (!navbar.contains(event.target) && event.target !== menuToggle) {
+                        navbar.classList.remove('show');
+                    }
+                });
+            });
 
             document.addEventListener('scroll', function () {
                 var navbar = document.getElementById('navbar');
